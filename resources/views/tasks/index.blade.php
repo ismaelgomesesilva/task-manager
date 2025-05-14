@@ -1,3 +1,10 @@
+<ul id="task-list">
+    @foreach ($tasks as $task)
+    <li data-id="{{ $task->id }}">{{ $task->name }}</li>
+    @endforeach
+</ul>
+
+
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 <script>
     new Sortable(document.getElementById('task-list'), {
@@ -21,3 +28,4 @@
             });
         }
     });
+</script>
